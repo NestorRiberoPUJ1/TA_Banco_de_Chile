@@ -1,0 +1,52 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+label {
+    background-color: green;
+}
+
+.labelRojo {
+    background-color: gray;
+    color: red;
+}
+
+#label1 {
+    color: darkblue;
+}
+
+
+.entradaVertical {
+    background-color: transparent;
+}
+
+.entradaVertical>label {
+    display: block;
+    background-color: transparent;
+}
+
+.entradaVertical>textarea {
+    display: block;
+}
+
+
+.precio {
+    border-color: gray;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 10px;
+
+    margin: 8px;
+    padding: 8px;
+    width: 200px;
+
+}
+
+#redPrice {
+    color: red
+}
+
+h4 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
