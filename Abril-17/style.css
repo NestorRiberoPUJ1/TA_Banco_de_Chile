@@ -1,6 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Smokum&display=swap');
+
+
 * {
     padding: 0px;
     margin: 0px;
+    font-family: 'Smokum', cursive;
 }
 
 label {
