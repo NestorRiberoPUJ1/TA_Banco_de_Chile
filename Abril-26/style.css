@@ -1,0 +1,6 @@
+.solicitud {
+    display: flex;
+    align-items: baseline;
+    width: 200px;
+    justify-content: space-between;
+}
