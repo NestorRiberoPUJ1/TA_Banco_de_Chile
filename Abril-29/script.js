@@ -9,7 +9,7 @@ var aleatorio = numerito * (max - min);
 aleatorio = Math.round(aleatorio) + min;
 console.log(numerito, aleatorio);
 */
-
+var quesos=["Provolone","Parmesano",""]
 function rangoAleatorio(min, max) {
     let number = Math.random();
     number = number * (max - min);
