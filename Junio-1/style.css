@@ -1,0 +1,11 @@
+#redTeam {
+    background-color: red;
+    width: 100px;
+    color: white;
+}
+
+#blueTeam {
+    background-color: blue;
+    width: 100px;
+    color: white;
+}
