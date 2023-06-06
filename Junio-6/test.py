@@ -33,11 +33,39 @@ for idx in range(0, 50):
 
 
 sumaImpares = 0
-for idx in range(0, 5001):
+for idx in range(0, 51):
     if idx % 2 != 0:
         sumaImpares += idx
 print(sumaImpares)
 suma = 0
-for idx in range(1, 5001, 2):
+for idx in range(1, 51, 2):
     suma += idx
 print(suma)
+
+
+# rango de valores con incrementales inicial a un final y cuente de x en x
+
+# para recorrer una lista
+
+lista = [4, 8, 12, 16, 20, 24]
+
+for idx in range(len(lista)):
+    print(idx, lista[idx])
+
+
+for elemento in lista:
+    print(elemento)
+
+dictionary = {"a": 42, "b": 44}
+
+print(dictionary.values())
+
+
+def obtenerCarro():
+    marca = "Ferrari"
+    modelo = "Enzo"
+    return marca, modelo
+
+
+elementos = obtenerCarro()
+print(elementos)
