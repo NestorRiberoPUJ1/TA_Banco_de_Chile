@@ -25,4 +25,43 @@ def mayores_que_el_segundo(lista):
     return False
 
 
-print(mayores_que_el_segundo([1, 4, 3, 4, 5]))
+# print(mayores_que_el_segundo([1, 4, 3, 4, 5]))
+
+
+def iterateDictionar(some_list):
+    for item in some_list:
+        # print(item)
+        texto = ""
+        for key, value in item.items():
+            texto += key+"-"+value+" , "
+        print(texto)
+
+
+# iterateDictionar(estudiantes)
+
+
+dict = {
+    "nombre": "Nestor",
+    "edad": 25,
+    "ciudades": ["NewYork", "LA", "MIAMI", "CHICAGO", "LOUISVILLE"]
+}
+lista = ["NewYork", "LA", "MIAMI", "CHICAGO",
+         "LOUISVILLE", {"ESTADO": "GEORGIA"}]
+
+NBA = {
+    "EAST": ["HEAT", "KNICKS", "CELTICS", "76ERS"],
+    "WEST": ["LAKERS", "WARRIORS", "NUGGETS", "SPURS"]
+}
+
+
+print(NBA["EAST"])
+
+""" for team in NBA["EAST"]:
+    print(team)
+for team in NBA["WEST"]:
+    print(team) """
+
+for key, value in NBA.items():
+    print(key, value)
+    for team in value:
+        print(team)
