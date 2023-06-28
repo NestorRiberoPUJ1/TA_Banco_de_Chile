@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/chessboard.css') }}">
+</head>
+
+<body>
+    <h1>X:{{n}} Y:{{m}}</h1>
+    <div class="chessboardContainer">
+        {% for x in range(0,m): %}
+        <div class="row">
+            {% for y in range(0,n): %}
+            {% if (y+x) % 2 == 0 %}
+            <div class="square bgBlack"></div>
+            {% else %}
+            <div class="square bgWhite"></div>
+            {% endif %}
+            {% endfor %}
+        </div>
+        {% endfor %}
+    </div>
+</body>
+
+</html>
