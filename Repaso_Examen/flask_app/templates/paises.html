@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="/paises" method="POST">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre">
+        <button type="submit">Crear</button>
+    </form>
+    <h4>Lista de paises</h4>
+    <ul>
+        {% for pais in paises: %}
+        <li>
+            <p><strong>{{pais.id}}</strong> <a href="/paises/{{pais.id}}">{{pais.nombre}}</a> </p>
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+
+</html>
