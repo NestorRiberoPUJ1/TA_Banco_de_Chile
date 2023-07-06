@@ -45,7 +45,7 @@ def show_pais(id):
     return render_template("paises/pais.html", pais=pais)
 
 
-@app.route("/paises/editar/<int:id>", methods=["GET"])
+@app.route("/paises/editar/<int:id>", methods=["POST"])
 def edit_pais(id):
     pais = Pais.get_by_id(id)
     return render_template("paises/editar_pais.html", pais=pais)
