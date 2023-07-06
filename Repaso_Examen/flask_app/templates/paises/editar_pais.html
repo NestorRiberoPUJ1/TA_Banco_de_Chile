@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>{{pais.nombre}}</h1>
+    <h3>Información:</h3>
+    <form action="/paises/editar" method="POST">
+        <input type="hidden" name="id" value="{{pais.id}}">
+        <ul>
+            <li>
+                <label for="nombre">Nombre:</label>
+                <input type="text" value="{{pais.nombre}}" name="nombre">
+            </li>
+            <li>
+                <p><strong>Creación:</strong> {{pais.created_at}}</p>
+            </li>
+            <li>
+                <p><strong>Actualización:</strong> {{pais.updated_at}}</p>
+            </li>
+        </ul>
+        <button type="submit">Actualizar</button>
+    </form>
+    <a href="/paises">Volver</a>
+</body>
+
+</html>

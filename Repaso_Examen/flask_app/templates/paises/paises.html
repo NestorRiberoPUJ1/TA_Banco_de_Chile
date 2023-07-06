@@ -17,7 +17,10 @@
     <ul>
         {% for pais in paises: %}
         <li>
-            <p><strong>{{pais.id}}</strong> <a href="/paises/{{pais.id}}">{{pais.nombre}}</a> </p>
+            <p><strong>{{pais.id}}</strong> <a href="/paises/{{pais.id}}">{{pais.nombre}}</a>
+                <button><a href="/paises/editar/{{pais.id}}">Editar</a></button>
+                <button><a href="/paises/borrar/{{pais.id}}">Eliminar</a></button>
+            </p>
         </li>
         {% endfor %}
     </ul>

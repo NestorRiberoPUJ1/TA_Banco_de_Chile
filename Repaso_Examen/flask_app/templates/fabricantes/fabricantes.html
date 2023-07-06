@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="/fabricantes" method="POST">
+        <div>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre">
+        </div>
+        <div>
+            <label for="pais">Pais:</label>
+            <select name="pais_id" id="pais">
+                {% for pais in paises: %}
+                <option value="{{pais.id}}">{{pais.nombre}}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <button type="submit">Crear</button>
+    </form>
+    <h4>Lista de Fabricantes</h4>
+    <ul>
+        {% for fabricante in fabricantes: %}
+        <li>
+            <p><strong>{{fabricante.id}}</strong> <a href="/fabricantes/{{fabricante.id}}">{{fabricante.nombre}}</a>
+                ({{fabricante.pais}})
+                <button><a href="/fabricantes/editar/{{fabricante.id}}">Editar</a></button>
+                <button><a href="/fabricantes/borrar/{{fabricante.id}}">Eliminar</a></button>
+            </p>
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+
+</html>

@@ -38,6 +38,9 @@ class Pais():
         return connectToMySQL('concesionario').query_db(query, data)
 
     @classmethod
-    def delete_by_id(cls, data):
+    def delete_by_id(cls, id):
+        data = {
+            "id": id
+        }
         query = "DELETE FROM paises WHERE (id = %(id)s);"
         return connectToMySQL('concesionario').query_db(query, data)
